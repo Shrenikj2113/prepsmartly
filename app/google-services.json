@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "725276647015",
+    "project_id": "prepsmartly-96cc0",
+    "storage_bucket": "prepsmartly-96cc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725276647015:android:c7f90e287a372b03df7ec2",
+        "android_client_info": {
+          "package_name": "com.example.prepsmartly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725276647015-131pb12jm5ch4s6svmd8d7dpvvc2ca1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrknzRcJOOQzfVs3Bee7tmv_3vApamnnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725276647015-131pb12jm5ch4s6svmd8d7dpvvc2ca1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
