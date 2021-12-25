@@ -1,5 +1,4 @@
 package com.example.prepsmartly
-
 import android.content.Intent
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity

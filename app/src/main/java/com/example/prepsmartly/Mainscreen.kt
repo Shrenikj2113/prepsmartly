@@ -13,11 +13,6 @@ class Mainscreen : AppCompatActivity() {
         setContentView(R.layout.activity_mainscreen)
         auth= FirebaseAuth.getInstance()
 
-
-
-
-
-
             }
         }
 
