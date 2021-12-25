@@ -32,28 +32,24 @@ class loginpage : AppCompatActivity() {
             } else if (passwordid.text.isBlank() || password2.length < 6) {
                 Toast.makeText(this, "Enter correct password", Toast.LENGTH_SHORT).show()
             } else {
-                send(email2,password2)
+                firebaseAuth.signInWithEmailAndPassword(email2, password2)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Toast.makeText(this, "yeeee", Toast.LENGTH_SHORT).show()
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.exception)
+                            Toast.makeText(
+                                baseContext, "Authentication failed.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                        }
+                    }
             }
 
 
         }
-    }
-
-    private fun send(email2:String,password2:String) {
-        firebaseAuth.signInWithEmailAndPassword(email2, password2)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Toast.makeText(this, "yeeee", Toast.LENGTH_SHORT).show()
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-
-                }
-            }
     }
 }
