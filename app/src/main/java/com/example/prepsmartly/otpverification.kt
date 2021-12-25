@@ -47,7 +47,7 @@ numberentred.text=intent.getStringExtra("phoneno")
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
-                    val intent1=Intent(this,Mainscreen::class.java)
+                    val intent1=Intent(this,loginpage::class.java)
 
                     auth.createUserWithEmailAndPassword(email.toString(), password.toString())
                         .addOnCompleteListener(this) { task ->
