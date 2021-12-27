@@ -1,4 +1,4 @@
-package com.example.prepsmartly
+package activity
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.prepsmartly.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_loginpage.*
 
@@ -16,11 +17,11 @@ class loginpage : AppCompatActivity() {
         setContentView(R.layout.activity_loginpage)
         firebaseAuth= FirebaseAuth.getInstance()
     registertext.setOnClickListener {
-        val intent= Intent(this,MainActivity::class.java)
+        val intent= Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
      forgot.setOnClickListener {
-         startActivity(Intent(this,forgotpasswordscreen::class.java))
+         startActivity(Intent(this, forgotpasswordscreen::class.java))
      }
         yoooo.setOnClickListener {
             val email2=emailid.editableText.toString().trim()

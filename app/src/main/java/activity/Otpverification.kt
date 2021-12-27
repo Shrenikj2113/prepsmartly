@@ -1,4 +1,4 @@
-package com.example.prepsmartly
+package activity
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -8,11 +8,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Toast
+import com.example.prepsmartly.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_otpverification.*
 
 class otpverification : AppCompatActivity() {
@@ -47,7 +47,7 @@ numberentred.text=intent.getStringExtra("phoneno")
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
-                    val intent1=Intent(this,loginpage::class.java)
+                    val intent1=Intent(this, loginpage::class.java)
 
                     auth.createUserWithEmailAndPassword(email.toString(), password.toString())
                         .addOnCompleteListener(this) { task ->

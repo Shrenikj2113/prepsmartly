@@ -1,12 +1,11 @@
-package com.example.prepsmartly
+package activity
 import android.content.Intent
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.example.prepsmartly.R
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("TAG23","onCodeSent:$verificationId")
                 storedVerificationId = verificationId
                 resendToken = token
-                val intent = Intent(applicationContext,otpverification::class.java)
+                val intent = Intent(applicationContext, otpverification::class.java)
                intent.putExtra("email",email11)
                 intent.putExtra("phoneno",phoneno.text.toString().trim())
                 intent.putExtra("password",password11)
@@ -101,7 +100,7 @@ class MainActivity : AppCompatActivity() {
    
         }
         signuptext.setOnClickListener {
-            val intent=Intent(this,loginpage::class.java)
+            val intent=Intent(this, loginpage::class.java)
             startActivity(intent)
         }
 
